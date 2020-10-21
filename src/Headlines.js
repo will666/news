@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Headlines.css";
-import axios from "axios";
+import axios from "./axios";
 
 const Headlines = () => {
   const apiKey = process.env.REACT_APP_API_KEY;
-  const apiUrl =
-    "https://newsapi.org/v2/top-headlines?country=us&pageSize=3&apiKey=";
+  const apiUrl = "/top-headlines?country=us&pageSize=3&apiKey=";
   const uri = apiUrl + apiKey;
 
   const [headlines, setHeadlines] = useState([]);

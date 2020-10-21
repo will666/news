@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./News.css";
-import axios from "axios";
+import axios from "./axios";
 
 const News = ({ title, category }) => {
   const apiKey = process.env.REACT_APP_API_KEY;
-  const apiUrl = `https://newsapi.org/v2/everything?q=${category}&pageSize=4&apiKey=`;
+  const apiUrl = `/everything?q=${category}&pageSize=4&apiKey=`;
   const uri = apiUrl + apiKey;
 
   const [news, setNews] = useState([]);
