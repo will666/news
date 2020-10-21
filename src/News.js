@@ -13,7 +13,6 @@ const News = ({ title, category }) => {
     async function fetchData() {
       const response = await axios.get(uri);
       setNews(response.data.articles);
-      console.log(response);
       return response;
     }
     fetchData();

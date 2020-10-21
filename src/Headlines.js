@@ -14,7 +14,6 @@ const Headlines = () => {
     async function fetchData() {
       const response = await axios.get(uri);
       setHeadlines(response.data.articles);
-      console.log(response);
       return response;
     }
     fetchData();
