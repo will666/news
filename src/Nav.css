@@ -1,0 +1,90 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+  align-items: center;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+.logo__block {
+  margin-right: 20px;
+}
+
+.nav__logo {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  background-color: #fff;
+  padding: 0px 5px 0px 5px;
+}
+
+.nav__logo--black {
+  color: #fff;
+  background-color: #000;
+}
+
+.logo__dot {
+  color: OrangeRed;
+  font-weight: 800;
+}
+
+.nav__links {
+  width: 100%;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.nav__links > a {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.nav__links > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orangered;
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav__links > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 823px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    margin: 0;
+  }
+
+  .nav__links > a {
+    font-size: 0.7rem;
+  }
+}
